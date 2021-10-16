@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
+import List from './components/List';
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	const data = [
+		{ id: '1', name: 'plate 1' },
+		{ id: '2', name: 'plate 2' },
+		{ id: '3', name: 'plate 3' },
+		{ id: '4', name: 'plate 3' },
+		{ id: '5', name: 'plate 3' },
+		{ id: '6', name: 'plate 3' },
+		{ id: '7', name: 'plate 3' },
+	];
+	return (
+		<View style={{ flexDirection: 'column', flex: 1 }}>
+			<List />
+		</View>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
